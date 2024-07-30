@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');  /* puedo llamar 
+varias fuentes con un solo import-- todo desde::after
+google fonts
+*/
+
+:root{
+  --color-primario:rgb(53, 211, 216) ;
+  --color-dos:rgb(31, 28, 17);
+  --color-tres:#F6F6F6;
+  --fuente-montserrat:"Montserrat", sans-serif;
+  --fuente-Krona: "Krona One", sans-serif;
+}
+
+
+*{
+  padding: 1px;   /* distancia contenido y sus bordes*/
+  margin: 1px;
+
+}
+
+body {
+    background-color: var(--color-dos);
+    color: var(--color-tres) ;
+    /* height: 10vh;    */
+    box-sizing: border-box;
+  }
+  .header{
+    padding: 2% 0% 0% 15%;
+  }
+  .header_menu{
+    display: flex;
+    gap: 80px;
+  }
+  .header_menu_link{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600; /*Grosor de letra o fuente */
+    color: var(--color-primario) ;
+    text-decoration: none;
+  }
+  
+  .imagenLogistica{
+    box-sizing: border-box;
+    width: 50%;
+    padding: 6px;
+  }
+  .presentacion{
+    display: flex;   /* organizacion flexbox*/
+    align-items: center;
+    padding: 5% 5%;
+    justify-content: space-between;    /* Justificacion separacion de flexbox*/
+    gap: 40px;
+
+  }
+  .presentacion_contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* espacion entre flexbox*/
+  }
+  .presentacion_contenido_titulo{
+    font-size: 2.25rem;  /* tamaño de ña fuente*/
+    font-family: var(--fuente-Krona);
+
+  }
+  .Titulo_destaque{
+    color: var(--color-primario);
+  }
+  .presentacion_contenido_texto{
+    font-size: 1.5rem;  /* tamaño de ña fuente*/
+    font-family: var(--fuente-montserrat);
+    
+    
+  }
+  .presentacion_enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+  }
+  .presentacion_enlaces_subtitulos{
+    font-family: var(--fuente-Krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .presentacion_enlaces_link{
+    width: 50%;
+    border: 2px solid var(--color-primario);
+    /* background-color: rgba(0, 255, 255, 0.603); */
+    text-align: center;
+    padding: 21.5px 0px;
+    border-radius: 8px;
+    font-family: var(--fuente-montserrat);
+    font-size:150%;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-tres);
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+  }
+  .presentacion_enlaces_link:hover{  /* cambia color de botones*/
+    background-color: var(--color-dos);
+  }
+  .footer{
+    background-color: var(--color-primario);
+    padding: 1.5rem;
+    color: var(--color-dos);
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400; /*Grosor de letra o fuente */
+  }
+  @media(max-width: 1000px){
+    .presentacion{
+      flex-direction: column-reverse;
+    }
+    .presentacion_contenido{
+      width: auto;
+    }
+    .header{       /*  No es necesario volver a llamar el flexbox si ya se llamo en el css principal */
+      padding: 10%;
+    }
+    .header_menu{
+      justify-content: center;
+    }
+  }
+
+  /* units, medidas absolutas como accesibilidad, nada de pixeles
